@@ -10,7 +10,7 @@ public class Logger {
 
     public static void log(final String message, final LoggingMode mode) {
 
-	    final String output = "[" + getCurrentDate() + "] " + prefix + "/" + mode + ": " + message;
+        final String output = "[" + getCurrentDate() + "] " + prefix + "/" + mode + ": " + message;
 
         if (mode.equals(LoggingMode.ERROR)) {
             System.err.println(output);
