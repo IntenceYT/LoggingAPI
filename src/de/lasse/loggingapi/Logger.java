@@ -10,16 +10,14 @@ public class Logger {
 
     public static void log(final String message, final LoggingMode mode) {
 
+	    final String output = "[" + getCurrentDate() + "] " + prefix + "/" + mode + ": " + message;
+
         if (mode.equals(LoggingMode.ERROR)) {
-            System.err.println(
-                    "[" + getCurrentDate() + "] " + prefix + "/" + mode + ": " + message
-            );
+            System.err.println(output);
         }
 
         if (mode.equals(LoggingMode.INFO)) {
-            System.out.println(
-                    "[" + getCurrentDate() + "] " + prefix + "/" + mode + ": " + message
-            );
+            System.out.println(output);
         }
     }
 
